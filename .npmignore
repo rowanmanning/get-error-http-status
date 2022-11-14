@@ -1,0 +1,11 @@
+!*.d.ts
+!*.d.ts.map
+.commitlintrc.json
+.eslintrc.json
+.github
+.husky
+.nyc_output
+CHANGELOG.md
+coverage
+docs
+test
