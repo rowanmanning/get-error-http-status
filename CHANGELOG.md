@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/rowanmanning/get-error-http-status/compare/v1.0.1...v1.0.2) (2023-02-14)
+
+
+### Bug Fixes
+
+* support npm v9 ([b9361e6](https://github.com/rowanmanning/get-error-http-status/commit/b9361e6e0c4891aa3994f4e581fc0d98045e9583))
+
 ## [1.0.1](https://github.com/rowanmanning/get-error-http-status/compare/v1.0.0...v1.0.1) (2023-01-07)
 
 
