@@ -41,7 +41,7 @@
     "husky": "^8.0.2",
     "mocha": "^10.1.0",
     "nyc": "^15.1.0",
-    "typescript": "^4.8.4"
+    "typescript": "^5.0.2"
   },
   "main": "lib/get-error-http-status.js",
   "nyc": {
