@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.0](https://github.com/rowanmanning/get-error-http-status/compare/v1.0.2...v2.0.0) (2023-03-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop official support for npm v7
+* drop support for Node.js 14
+
+### Miscellaneous
+
+* drop official support for npm v7 ([c776778](https://github.com/rowanmanning/get-error-http-status/commit/c77677830355bb2a68a36c87c4644ff7648a5240))
+* drop support for Node.js 14 ([119bf75](https://github.com/rowanmanning/get-error-http-status/commit/119bf75a140f9f5563c0634b969f511b5519a9a0))
+
 ## [1.0.2](https://github.com/rowanmanning/get-error-http-status/compare/v1.0.1...v1.0.2) (2023-02-14)
 
 
