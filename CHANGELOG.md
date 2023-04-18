@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/rowanmanning/get-error-http-status/compare/v2.0.0...v2.0.1) (2023-04-18)
+
+
+### Bug Fixes
+
+* add support for Node.js 20 ([23b3352](https://github.com/rowanmanning/get-error-http-status/commit/23b33526ee449ebf7a9142e8a7760dbd686323d1))
+
 ## [2.0.0](https://github.com/rowanmanning/get-error-http-status/compare/v1.0.2...v2.0.0) (2023-03-25)
 
 
