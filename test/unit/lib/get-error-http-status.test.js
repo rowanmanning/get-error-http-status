@@ -1,6 +1,6 @@
 'use strict';
 
-const {assert} = require('chai');
+const assert = require('node:assert');
 
 describe('lib/get-error-http-status', () => {
 	let getErrorHttpStatus;
