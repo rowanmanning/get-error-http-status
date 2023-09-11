@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.0.0](https://github.com/rowanmanning/get-error-http-status/compare/v2.0.1...v3.0.0) (2023-09-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for Node.js 16
+
+### Bug Fixes
+
+* correct the README Node.js version ([22a4233](https://github.com/rowanmanning/get-error-http-status/commit/22a423326239fd885964e812f2bb29fb41a3aacb))
+
+
+### Miscellaneous
+
+* drop support for Node.js 16 ([079670a](https://github.com/rowanmanning/get-error-http-status/commit/079670a57568cb0e8fbc86a43a634b4bef9218d9))
+
 ## [2.0.1](https://github.com/rowanmanning/get-error-http-status/compare/v2.0.0...v2.0.1) (2023-04-18)
 
 
