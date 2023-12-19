@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.0.0](https://github.com/rowanmanning/get-error-http-status/compare/get-error-http-status-v3.0.0...get-error-http-status-v1.0.0) (2023-12-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for Node.js 16
+* drop official support for npm v7
+* drop support for Node.js 14
+
+### Bug Fixes
+
+* add support for Node.js 20 ([23b3352](https://github.com/rowanmanning/get-error-http-status/commit/23b33526ee449ebf7a9142e8a7760dbd686323d1))
+* bump json5 from 2.2.1 to 2.2.3 ([cb05309](https://github.com/rowanmanning/get-error-http-status/commit/cb05309adc4811124fde8541bee90594bb749a57))
+* correct the README Node.js version ([22a4233](https://github.com/rowanmanning/get-error-http-status/commit/22a423326239fd885964e812f2bb29fb41a3aacb))
+* migrate to release-please-action v4 ([655d8db](https://github.com/rowanmanning/get-error-http-status/commit/655d8dbcddf950751d034fa686f0a82ef742368f))
+* support npm v9 ([b9361e6](https://github.com/rowanmanning/get-error-http-status/commit/b9361e6e0c4891aa3994f4e581fc0d98045e9583))
+
+
+### Miscellaneous Chores
+
+* drop official support for npm v7 ([c776778](https://github.com/rowanmanning/get-error-http-status/commit/c77677830355bb2a68a36c87c4644ff7648a5240))
+* drop support for Node.js 14 ([119bf75](https://github.com/rowanmanning/get-error-http-status/commit/119bf75a140f9f5563c0634b969f511b5519a9a0))
+* drop support for Node.js 16 ([079670a](https://github.com/rowanmanning/get-error-http-status/commit/079670a57568cb0e8fbc86a43a634b4bef9218d9))
+* initial commit ([d980caf](https://github.com/rowanmanning/get-error-http-status/commit/d980caf816c8d149f1dba5280466171a71e6490d))
+
 ## [3.0.0](https://github.com/rowanmanning/get-error-http-status/compare/v2.0.1...v3.0.0) (2023-09-11)
 
 
