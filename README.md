@@ -69,4 +69,4 @@ In any of the following scenarios, the function will return a default status cod
 ## License
 
 Licensed under the [MIT](LICENSE) license.<br/>
-Copyright &copy; 2022, Rowan Manning
+Copyright &copy; 2024, Rowan Manning
