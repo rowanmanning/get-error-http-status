@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/rowanmanning/get-error-http-status/compare/v3.0.0...v3.0.1) (2024-01-14)
+
+
+### Documentation Changes
+
+* update copyright dates ([e2a9491](https://github.com/rowanmanning/get-error-http-status/commit/e2a9491f77a2ac8a0f6fdccd9b7f193d12b4c1c2))
+
 ## [3.0.0](https://github.com/rowanmanning/get-error-http-status/compare/v2.0.1...v3.0.0) (2023-09-11)
 
 
