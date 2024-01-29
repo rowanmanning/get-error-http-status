@@ -37,7 +37,7 @@
     "@commitlint/config-conventional": "^18.4.2",
     "@rowanmanning/eslint-config": "^8.0.0",
     "eslint": "^8.27.0",
-    "husky": "^8.0.2",
+    "husky": "^9.0.7",
     "nyc": "^15.1.0",
     "typescript": "^5.0.2"
   },
