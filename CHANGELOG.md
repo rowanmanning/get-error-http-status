@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/rowanmanning/get-error-http-status/compare/v3.0.1...v3.1.0) (2024-01-30)
+
+
+### Features
+
+* add official support for npm 10 ([aa36deb](https://github.com/rowanmanning/get-error-http-status/commit/aa36deb3d6a38248a7da2ff07eac40c387090456))
+
 ## [3.0.1](https://github.com/rowanmanning/get-error-http-status/compare/v3.0.0...v3.0.1) (2024-01-14)
 
 
