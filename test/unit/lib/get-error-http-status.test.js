@@ -1,6 +1,6 @@
 'use strict';
 
-const {beforeEach, describe, it} = require('node:test');
+const { beforeEach, describe, it } = require('node:test');
 const assert = require('node:assert');
 
 describe('lib/get-error-http-status', () => {
@@ -11,7 +11,6 @@ describe('lib/get-error-http-status', () => {
 	});
 
 	describe('getErrorHttpStatus(error)', () => {
-
 		describe('when `error` has a numeric `status` property', () => {
 			it('returns the value of the `status` property', () => {
 				const error = new Error('mock error');
@@ -174,7 +173,6 @@ describe('lib/get-error-http-status', () => {
 				assert.strictEqual(getErrorHttpStatus(), 500);
 			});
 		});
-
 	});
 
 	describe('.default', () => {
@@ -182,5 +180,4 @@ describe('lib/get-error-http-status', () => {
 			assert.strictEqual(getErrorHttpStatus, getErrorHttpStatus.default);
 		});
 	});
-
 });
