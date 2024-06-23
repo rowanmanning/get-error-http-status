@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/rowanmanning/get-error-http-status/compare/v3.1.0...v3.2.0) (2024-06-23)
+
+
+### Features
+
+* add Node.js 22 support ([9295777](https://github.com/rowanmanning/get-error-http-status/commit/929577705d6d1b10ed4565d072b0a4f23fa2a1f4))
+
 ## [3.1.0](https://github.com/rowanmanning/get-error-http-status/compare/v3.0.1...v3.1.0) (2024-01-30)
 
 
