@@ -7,80 +7,9 @@ on:
   pull_request:
     branches: [ main ]
 
-env:
-  NODE_ENV: test
-
 jobs:
-
-  verify:
-    name: Verify code
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: npm
-      - run: npm ci
-      - run: npm run verify
-
-  test-unit:
-    name: Run unit tests in Node.js ${{ matrix.node }}
-    needs: verify
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [18, 20, 22]
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node }}
-          cache: npm
-      - run: npm ci
-      - run: npm run test:coverage
-
-  manage-releases:
-    name: Manage PRs and GitHub Releases
-    needs: test-unit
-    runs-on: ubuntu-latest
-    if: github.ref_name == 'main'
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          cache: npm
-          node-version: 20
-      - name: Create release PR
-        run: |
-          npx release-please@16 release-pr \
-            --bump-minor-pre-major \
-            --bump-patch-for-minor-pre-major \
-            --release-type=node \
-            --repo-url=${{ github.repository }} \
-            --token=${{ secrets.RELEASE_TOKEN }}
-      - name: Create GitHub releases
-        run: |
-          npx release-please@16 github-release \
-            --release-type=node \
-            --repo-url=${{ github.repository }} \
-            --token=${{ secrets.RELEASE_TOKEN }}
-
-  publish:
-    name: Publish package
-    needs: test-unit
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          cache: npm
-          node-version: 20
-          registry-url: https://registry.npmjs.org
-      - run: npm ci
-      - run: npm run build
-      - name: Publish to npm
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+  ci:
+    uses: rowanmanning/actions/.github/workflows/node-package-single.yml@v1
+    secrets:
+      githubToken: ${{ secrets.RELEASE_TOKEN }}
+      npmToken: ${{ secrets.NPM_AUTH_TOKEN }}
