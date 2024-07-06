@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.1](https://github.com/rowanmanning/get-error-http-status/compare/v3.2.0...v3.2.1) (2024-07-06)
+
+
+### Bug Fixes
+
+* allow error-like objects in the types ([60b7a79](https://github.com/rowanmanning/get-error-http-status/commit/60b7a791393bfe71b3d735bd7df645c95de5c1af))
+
 ## [3.2.0](https://github.com/rowanmanning/get-error-http-status/compare/v3.1.0...v3.2.0) (2024-06-23)
 
 
