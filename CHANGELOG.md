@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.2](https://github.com/rowanmanning/get-error-http-status/compare/v3.2.1...v3.2.2) (2024-07-13)
+
+
+### Bug Fixes
+
+* prevent husky from failing ([5ab7758](https://github.com/rowanmanning/get-error-http-status/commit/5ab7758e35f39b0d33a6a4d68cf02ccb0f0c42ae))
+
 ## [3.2.1](https://github.com/rowanmanning/get-error-http-status/compare/v3.2.0...v3.2.1) (2024-07-06)
 
 
