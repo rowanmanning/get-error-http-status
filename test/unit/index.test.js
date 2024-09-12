@@ -3,11 +3,11 @@
 const { beforeEach, describe, it } = require('node:test');
 const assert = require('node:assert');
 
-describe('lib/get-error-http-status', () => {
+describe('@rowanmanning/get-error-http-status', () => {
 	let getErrorHttpStatus;
 
 	beforeEach(() => {
-		getErrorHttpStatus = require('../../../lib/get-error-http-status');
+		getErrorHttpStatus = require('../..');
 	});
 
 	describe('getErrorHttpStatus(error)', () => {
