@@ -14,7 +14,7 @@ Get the HTTP status code for an error object.
 
 This library requires the following to run:
 
-  * [Node.js](https://nodejs.org/) 18+
+  * [Node.js](https://nodejs.org/) 20+
 
 
 ## Usage
