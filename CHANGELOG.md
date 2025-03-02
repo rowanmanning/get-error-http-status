@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/rowanmanning/get-error-http-status/compare/v4.0.0...v4.1.0) (2025-03-02)
+
+
+### Features
+
+* expose a method to validate error statuses ([89b9c31](https://github.com/rowanmanning/get-error-http-status/commit/89b9c312c9a40be1cc572755ccff16249261df14))
+
 ## [4.0.0](https://github.com/rowanmanning/get-error-http-status/compare/v3.2.2...v4.0.0) (2025-03-02)
 
 
