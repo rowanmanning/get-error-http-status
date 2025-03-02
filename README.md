@@ -3,13 +3,11 @@
 
 Get the HTTP status code for an error object.
 
-
-## Table of Contents
-
-  * [Requirements](#requirements)
-  * [Usage](#usage)
-  * [Contributing](#contributing)
-  * [License](#license)
+* [Requirements](#requirements)
+* [Usage](#usage)
+* [Migration](#migration)
+* [Contributing](#contributing)
+* [License](#license)
 
 
 ## Requirements
@@ -59,6 +57,11 @@ In any of the following scenarios, the function will return a default status cod
   * The error status property is less than `400` or greater than `599`
   * The error status property is a decimal
   * The error status property is a non-numeric string
+
+
+## Migration
+
+A new major version of this project is released if breaking changes are introduced. We maintain a [migration guide](docs/migration.md) to help users migrate between these versions.
 
 
 ## Contributing
