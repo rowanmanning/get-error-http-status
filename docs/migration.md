@@ -6,6 +6,7 @@ This document outlines how to migrate to new major breaking versions of this lib
 * [Migrating from v3 to v4](#migrating-from-v3-to-v4)
   * [Dropped Node.js v18 support](#dropped-nodejs-v18-support)
   * [Switch to named exports](#switch-to-named-exports)
+  * [Stricter number parsing](#stricter-number-parsing)
 * [Migrating from v2 to v3](#migrating-from-v2-to-v3)
   * [Dropped Node.js v16 support](#dropped-nodejs-v16-support)
 * [Migrating from v1 to v2](#migrating-from-v1-to-v2)
@@ -32,6 +33,18 @@ or
 - import getErrorHttpStatus from '@rowanmanning/get-error-http-status';
 + import { getErrorHttpStatus } from '@rowanmanning/get-error-http-status';
 ```
+
+### Stricter number parsing
+
+We switched from using `parseInt` to `Number` which means that some strings are no longer found to be valid status codes, meaning a default is used. For example in v3 the following would result in a status code of `404` being returned:
+
+```
+const error = new Error('Not found');
+error.status = '404hello'
+getErrorHttpStatus(error);
+```
+
+Now the above will return `500` because the status property is not a valid error status code.
 
 ## Migrating from v2 to v3
 

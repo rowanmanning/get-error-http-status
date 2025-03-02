@@ -5,6 +5,8 @@ Get the HTTP status code for an error object.
 
 * [Requirements](#requirements)
 * [Usage](#usage)
+  * [`getErrorHttpStatus`](#geterrorhttpstatus)
+  * [`isErrorHttpStatus`](#iserrorhttpstatus)
 * [Migration](#migration)
 * [Contributing](#contributing)
 * [License](#license)
@@ -31,6 +33,8 @@ Load the library into your code with a `require` call:
 const { getErrorHttpStatus } = require('@rowanmanning/get-error-http-status');
 ```
 
+### `getErrorHttpStatus`
+
 Call the method with an error object to get the status code:
 
 ```js
@@ -49,7 +53,7 @@ notFoundError.statusCode = 404;
 const status = getErrorHttpStatus(error); // 404
 ```
 
-If the `status` or `statusCode` property is a string, it will be parsed as an integer before continuing.
+If the `status` or `statusCode` property is a string, it will be parsed as an number before continuing.
 
 In any of the following scenarios, the function will return a default status code of `500`:
 
@@ -58,6 +62,17 @@ In any of the following scenarios, the function will return a default status cod
   * The error status property is a decimal
   * The error status property is a non-numeric string
 
+### `isErrorHttpStatus`
+
+This library exposes a second method named `isErrorHttpStatus`. You can use this to determine whether a given value is a valid error HTTP status (integer, `400` to `599`):
+
+```js
+const { isErrorHttpStatus } = require('@rowanmanning/get-error-http-status');
+
+isErrorHttpStatus(500); // true
+isErrorHttpStatus(200); // false
+isErrorHttpStatus('abc'); // false
+```
 
 ## Migration
 
