@@ -7,7 +7,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 	let getErrorHttpStatus;
 
 	beforeEach(() => {
-		getErrorHttpStatus = require('../..');
+		getErrorHttpStatus = require('../..').getErrorHttpStatus;
 	});
 
 	describe('getErrorHttpStatus(error)', () => {
@@ -172,12 +172,6 @@ describe('@rowanmanning/get-error-http-status', () => {
 			it('returns 500', () => {
 				assert.strictEqual(getErrorHttpStatus(), 500);
 			});
-		});
-	});
-
-	describe('.default', () => {
-		it('aliases the module exports', () => {
-			assert.strictEqual(getErrorHttpStatus, getErrorHttpStatus.default);
 		});
 	});
 });

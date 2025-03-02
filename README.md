@@ -28,7 +28,7 @@ npm install @rowanmanning/get-error-http-status
 Load the library into your code with a `require` call:
 
 ```js
-const getErrorHttpStatus = require('@rowanmanning/get-error-http-status');
+const { getErrorHttpStatus } = require('@rowanmanning/get-error-http-status');
 ```
 
 Call the method with an error object to get the status code:

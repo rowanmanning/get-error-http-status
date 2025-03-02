@@ -12,7 +12,7 @@ const DEFAULT_STATUS_CODE = 500;
  * @param {ErrorLike} error - The error to get the HTTP status code for.
  * @returns {number} - Returns the HTTP status code.
  */
-function getErrorHttpStatus(error) {
+exports.getErrorHttpStatus = function getErrorHttpStatus(error) {
 	if (typeof error !== 'object' || error === null || Array.isArray(error)) {
 		return DEFAULT_STATUS_CODE;
 	}
@@ -21,7 +21,7 @@ function getErrorHttpStatus(error) {
 		getErrorHttpStatusFromProperty(error, 'statusCode') ||
 		DEFAULT_STATUS_CODE
 	);
-}
+};
 
 /**
  * Get an HTTP status code from an error property.
@@ -52,9 +52,3 @@ function getErrorHttpStatusFromProperty(error, property) {
 
 	return isValidStatus ? status : null;
 }
-
-/**
- * @type {typeof getErrorHttpStatus}
- */
-module.exports = getErrorHttpStatus;
-module.exports.default = module.exports;
