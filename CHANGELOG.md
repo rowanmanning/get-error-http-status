@@ -1,5 +1,22 @@
 # Changelog
 
+## [4.0.0](https://github.com/rowanmanning/get-error-http-status/compare/v3.2.2...v4.0.0) (2025-03-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop Node.js 18 support
+* switch away from default exports
+
+### Miscellaneous Chores
+
+* drop Node.js 18 support ([f7caf73](https://github.com/rowanmanning/get-error-http-status/commit/f7caf738a588ac9830da70b44dc5bbb11c0c37eb))
+
+
+### Code Refactoring
+
+* switch away from default exports ([f823d1d](https://github.com/rowanmanning/get-error-http-status/commit/f823d1dd924cba39a437c2d39411115a8ab860c3))
+
 ## [3.2.2](https://github.com/rowanmanning/get-error-http-status/compare/v3.2.1...v3.2.2) (2024-07-13)
 
 
