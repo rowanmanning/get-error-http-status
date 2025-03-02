@@ -1,16 +1,13 @@
 'use strict';
 
+/**
+ * @import { ErrorLike, getErrorHttpStatus } from '@rowanmanning/get-error-http-status'
+ */
+
 const DEFAULT_STATUS_CODE = 500;
 
 /**
- * @typedef {Error & {[key: string]: any} | {[key: string]: any}} ErrorLike
- */
-
-/**
- * Get the HTTP status code for an error.
- *
- * @param {ErrorLike} error - The error to get the HTTP status code for.
- * @returns {number} - Returns the HTTP status code.
+ * @type {getErrorHttpStatus}
  */
 exports.getErrorHttpStatus = function getErrorHttpStatus(error) {
 	if (typeof error !== 'object' || error === null || Array.isArray(error)) {
@@ -24,12 +21,9 @@ exports.getErrorHttpStatus = function getErrorHttpStatus(error) {
 };
 
 /**
- * Get an HTTP status code from an error property.
- *
- * @private
- * @param {ErrorLike} error - The error to check the property of.
- * @param {string} property - The property name to check.
- * @returns {number | null} - Returns the HTTP status code or null if one is not found.
+ * @param {ErrorLike} error
+ * @param {string} property
+ * @returns {number | null}
  */
 function getErrorHttpStatusFromProperty(error, property) {
 	// There is no status property
@@ -37,7 +31,7 @@ function getErrorHttpStatusFromProperty(error, property) {
 		return null;
 	}
 
-	const rawStatus = error[property];
+	const rawStatus = `${error[property]}`;
 	const status = Number.parseInt(rawStatus, 10);
 
 	// Check whether the status is valid
