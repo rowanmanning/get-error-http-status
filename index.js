@@ -1,13 +1,13 @@
 'use strict';
 
 /**
- * @import { ErrorLike, getErrorHttpStatus, isErrorHttpStatus } from '@rowanmanning/get-error-http-status'
+ * @import { ErrorLike, getErrorHttpStatus, isErrorHttpStatus } from '.'
  */
 
 const DEFAULT_STATUS_CODE = 500;
 
 /**
- * @type {getErrorHttpStatus}
+ * @type {typeof getErrorHttpStatus}
  */
 exports.getErrorHttpStatus = function getErrorHttpStatus(error) {
 	if (typeof error !== 'object' || error === null || Array.isArray(error)) {
@@ -21,7 +21,7 @@ exports.getErrorHttpStatus = function getErrorHttpStatus(error) {
 };
 
 /**
- * @type {isErrorHttpStatus}
+ * @type {typeof isErrorHttpStatus}
  */
 exports.isErrorHttpStatus = function isErrorHttpStatus(status) {
 	return Number.isInteger(status) && status >= 400 && status < 600;
