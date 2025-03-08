@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.1.1](https://github.com/rowanmanning/get-error-http-status/compare/v4.1.0...v4.1.1) (2025-03-08)
+
+
+### Bug Fixes
+
+* move types out of types folder ([774f9c3](https://github.com/rowanmanning/get-error-http-status/commit/774f9c32a0e48e8e35926f8a3ea38a42189af260))
+
+
 ## [4.1.0](https://github.com/rowanmanning/get-error-http-status/compare/v4.0.0...v4.1.0) (2025-03-02)
 
 
