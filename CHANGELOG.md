@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.2](https://github.com/rowanmanning/get-error-http-status/compare/v4.1.1...v4.1.2) (2025-03-16)
+
+
+### Bug Fixes
+
+* correct the types to allow plain errors ([b2733a0](https://github.com/rowanmanning/get-error-http-status/commit/b2733a0ef1a134e67429167db44abb40d6819dbc))
+
 ## [4.1.1](https://github.com/rowanmanning/get-error-http-status/compare/v4.1.0...v4.1.1) (2025-03-08)
 
 
