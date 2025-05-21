@@ -1,6 +1,6 @@
 {
   "name": "@rowanmanning/get-error-http-status",
-  "version": "4.1.2",
+  "version": "4.2.0",
   "description": "Get the HTTP status code for an error object",
   "keywords": [
     "error",

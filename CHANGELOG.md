@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/rowanmanning/get-error-http-status/compare/v4.1.2...v4.2.0) (2025-05-21)
+
+
+### Features
+
+* add Node.js 24 support ([2a3f756](https://github.com/rowanmanning/get-error-http-status/commit/2a3f756a6d8b0a627a031014adf765e0df5f02a6))
+
 ## [4.1.2](https://github.com/rowanmanning/get-error-http-status/compare/v4.1.1...v4.1.2) (2025-03-16)
 
 
