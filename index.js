@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @import { ErrorLike, getErrorHttpStatus, isErrorHttpStatus } from '.'
  */
@@ -9,7 +7,7 @@ const DEFAULT_STATUS_CODE = 500;
 /**
  * @type {typeof getErrorHttpStatus}
  */
-exports.getErrorHttpStatus = function getErrorHttpStatus(error) {
+export function getErrorHttpStatus(error) {
 	if (typeof error !== 'object' || error === null || Array.isArray(error)) {
 		return DEFAULT_STATUS_CODE;
 	}
@@ -18,14 +16,14 @@ exports.getErrorHttpStatus = function getErrorHttpStatus(error) {
 		getErrorHttpStatusFromProperty(error, 'statusCode') ||
 		DEFAULT_STATUS_CODE
 	);
-};
+}
 
 /**
  * @type {typeof isErrorHttpStatus}
  */
-exports.isErrorHttpStatus = function isErrorHttpStatus(status) {
+export function isErrorHttpStatus(status) {
 	return Number.isInteger(status) && status >= 400 && status < 600;
-};
+}
 
 /**
  * @param {ErrorLike} error
@@ -34,5 +32,5 @@ exports.isErrorHttpStatus = function isErrorHttpStatus(status) {
  */
 function getErrorHttpStatusFromProperty(error, property) {
 	const status = Number(error[property]);
-	return exports.isErrorHttpStatus(status) ? status : null;
+	return isErrorHttpStatus(status) ? status : null;
 }

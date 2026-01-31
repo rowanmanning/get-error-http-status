@@ -1,15 +1,9 @@
-'use strict';
+import assert from 'node:assert';
+import { describe, it } from 'node:test';
 
-const { beforeEach, describe, it } = require('node:test');
-const assert = require('node:assert');
+const { getErrorHttpStatus } = await import('@rowanmanning/get-error-http-status');
 
 describe('@rowanmanning/get-error-http-status', () => {
-	let getErrorHttpStatus;
-
-	beforeEach(() => {
-		getErrorHttpStatus = require('../..').getErrorHttpStatus;
-	});
-
 	describe('getErrorHttpStatus(error)', () => {
 		describe('when `error` has a numeric `status` property', () => {
 			it('returns the value of the `status` property', () => {
