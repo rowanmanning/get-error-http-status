@@ -5,6 +5,7 @@ This document outlines how to migrate to new major breaking versions of this lib
 
 * [Migrating from v4 to v5](#migrating-from-v4-to-v5)
   * [Dropped Node.js v20 support](#dropped-nodejs-v20-support)
+  * [Publish ECMAScript Modules](#publish-ecmascript-modules)
 * [Migrating from v3 to v4](#migrating-from-v3-to-v4)
   * [Dropped Node.js v18 support](#dropped-nodejs-v18-support)
   * [Switch to named exports](#switch-to-named-exports)
@@ -19,6 +20,10 @@ This document outlines how to migrate to new major breaking versions of this lib
 ### Dropped Node.js v20 support
 
 The library now only supports Node.js v22 and above.
+
+### Publish ECMAScript Modules
+
+The library is now published as native ECMAScript modules.
 
 ## Migrating from v3 to v4
 
