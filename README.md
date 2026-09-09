@@ -27,10 +27,10 @@ Install with [npm](https://www.npmjs.com/):
 npm install @rowanmanning/get-error-http-status
 ```
 
-Load the library into your code with a `require` call:
+Import the library into your code:
 
 ```js
-const { getErrorHttpStatus } = require('@rowanmanning/get-error-http-status');
+import { getErrorHttpStatus } from '@rowanmanning/get-error-http-status';
 ```
 
 ### `getErrorHttpStatus`
@@ -67,7 +67,7 @@ In any of the following scenarios, the function will return a default status cod
 This library exposes a second method named `isErrorHttpStatus`. You can use this to determine whether a given value is a valid error HTTP status (integer, `400` to `599`):
 
 ```js
-const { isErrorHttpStatus } = require('@rowanmanning/get-error-http-status');
+import { isErrorHttpStatus } from '@rowanmanning/get-error-http-status';
 
 isErrorHttpStatus(500); // true
 isErrorHttpStatus(200); // false
