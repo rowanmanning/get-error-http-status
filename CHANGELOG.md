@@ -1,5 +1,22 @@
 # Changelog
 
+## [5.0.0](https://github.com/rowanmanning/get-error-http-status/compare/v4.2.0...v5.0.0) (2026-09-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* switch to ESM
+* drop Node.js 20
+
+### Miscellaneous Chores
+
+* drop Node.js 20 ([bf13835](https://github.com/rowanmanning/get-error-http-status/commit/bf13835e2700f9e370a1f9e338fd3d2d580421a0))
+
+
+### Code Refactoring
+
+* switch to ESM ([5c9a166](https://github.com/rowanmanning/get-error-http-status/commit/5c9a16654f7f3eab1882043e18be7aae519b7d93))
+
 ## [4.2.0](https://github.com/rowanmanning/get-error-http-status/compare/v4.1.2...v4.2.0) (2025-05-21)
 
 
