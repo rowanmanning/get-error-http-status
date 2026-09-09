@@ -1,12 +1,17 @@
 import assert from 'node:assert';
 import { describe, it } from 'node:test';
-import { getErrorHttpStatus } from '../../index.js';
+import { getErrorHttpStatus } from '../../index.ts';
+
+class ErrorWithStatus extends Error {
+	status: unknown;
+	statusCode: unknown;
+}
 
 describe('@rowanmanning/get-error-http-status', () => {
 	describe('getErrorHttpStatus(error)', () => {
 		describe('when `error` has a numeric `status` property', () => {
 			it('returns the value of the `status` property', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.status = 456;
 				assert.strictEqual(getErrorHttpStatus(error), 456);
 			});
@@ -14,7 +19,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has a numeric `statusCode` property', () => {
 			it('returns the value of the `statusCode` property', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.statusCode = 456;
 				assert.strictEqual(getErrorHttpStatus(error), 456);
 			});
@@ -22,7 +27,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has numeric `status` and `statusCode` properties', () => {
 			it('returns the value of the `status` property', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.status = 456;
 				error.statusCode = 567;
 				assert.strictEqual(getErrorHttpStatus(error), 456);
@@ -31,7 +36,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has a numeric string `status` property', () => {
 			it('returns the value of the `status` property parsed as an integer', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.status = '456';
 				assert.strictEqual(getErrorHttpStatus(error), 456);
 			});
@@ -39,7 +44,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has a numeric string `statusCode` property', () => {
 			it('returns the value of the `statusCode` property parsed as an integer', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.statusCode = '456';
 				assert.strictEqual(getErrorHttpStatus(error), 456);
 			});
@@ -47,14 +52,14 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has no `status` or `statusCode` property', () => {
 			it('returns 500', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				assert.strictEqual(getErrorHttpStatus(error), 500);
 			});
 		});
 
 		describe('when `error` has a non-numeric `status` property', () => {
 			it('returns 500', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.status = {};
 				assert.strictEqual(getErrorHttpStatus(error), 500);
 			});
@@ -62,7 +67,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has a non-numeric `statusCode` property', () => {
 			it('returns 500', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.statusCode = {};
 				assert.strictEqual(getErrorHttpStatus(error), 500);
 			});
@@ -70,7 +75,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has a decimal `status` property', () => {
 			it('returns 500', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.status = 456.789;
 				assert.strictEqual(getErrorHttpStatus(error), 500);
 			});
@@ -78,7 +83,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has a decimal `statusCode` property', () => {
 			it('returns 500', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.statusCode = 456.789;
 				assert.strictEqual(getErrorHttpStatus(error), 500);
 			});
@@ -86,7 +91,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has non-numeric `status` property but a numeric `statusCode` property', () => {
 			it('returns the value of the `statusCode` property', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.status = {};
 				error.statusCode = 456;
 				assert.strictEqual(getErrorHttpStatus(error), 456);
@@ -95,7 +100,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has a numeric `status` property lower than 400', () => {
 			it('returns 500', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.status = 399;
 				assert.strictEqual(getErrorHttpStatus(error), 500);
 			});
@@ -103,7 +108,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has a numeric `statusCode` property lower than 400', () => {
 			it('returns 500', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.statusCode = 399;
 				assert.strictEqual(getErrorHttpStatus(error), 500);
 			});
@@ -111,7 +116,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has a numeric `status` property higher than 599', () => {
 			it('returns 500', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.status = 600;
 				assert.strictEqual(getErrorHttpStatus(error), 500);
 			});
@@ -119,7 +124,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` has a numeric `statusCode` property higher than 599', () => {
 			it('returns 500', () => {
-				const error = new Error('mock error');
+				const error = new ErrorWithStatus('mock error');
 				error.statusCode = 600;
 				assert.strictEqual(getErrorHttpStatus(error), 500);
 			});
@@ -163,7 +168,7 @@ describe('@rowanmanning/get-error-http-status', () => {
 
 		describe('when `error` is not defined', () => {
 			it('returns 500', () => {
-				assert.strictEqual(getErrorHttpStatus(), 500);
+				assert.strictEqual(getErrorHttpStatus(undefined), 500);
 			});
 		});
 	});
