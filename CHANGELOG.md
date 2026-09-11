@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.1.0](https://github.com/rowanmanning/get-error-http-status/compare/v5.0.0...v5.1.0) (2026-09-11)
+
+
+### Features
+
+* add Node.js 26 support ([ab79320](https://github.com/rowanmanning/get-error-http-status/commit/ab79320361e4b5f3e1b983b5df07159dda8da4ec))
+
 ## [5.0.0](https://github.com/rowanmanning/get-error-http-status/compare/v4.2.0...v5.0.0) (2026-09-09)
 
 
