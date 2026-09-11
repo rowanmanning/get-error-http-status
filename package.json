@@ -27,7 +27,7 @@
     "prepare": "husky || true"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.5.3",
+    "@commitlint/cli": "^21.2.2",
     "@commitlint/config-conventional": "^20.5.3",
     "@rowanmanning/biome-config": "^3.1.0",
     "@types/node": "^26.5.0",
